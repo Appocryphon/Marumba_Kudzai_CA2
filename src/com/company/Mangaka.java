@@ -1,16 +1,36 @@
 package com.company;
 
-public class Mangaka
-{
-    String name;
-    int yearBorn;
-    float age;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Mangaka(String name, int yearBorn, int age)
+public class Mangaka extends mangaManager {
+
+    String name;
+    float yearBorn;
+
+
+
+
+    public Mangaka(String name, int yearBorn)
     {
         this.name = name;
         this.yearBorn = yearBorn;
-        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getYearBorn() {
+        return yearBorn;
+    }
+
+    public void setYearBorn(float yearBorn) {
+        this.yearBorn = yearBorn;
     }
 
     @Override
@@ -18,7 +38,6 @@ public class Mangaka
         return "Mangaka{" +
                 "name='" + name + '\'' +
                 ", yearBorn=" + yearBorn +
-                ", age=" + age +
                 '}';
     }
 }
