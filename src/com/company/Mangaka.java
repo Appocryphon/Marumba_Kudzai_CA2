@@ -4,7 +4,7 @@ public class Mangaka
 {
     String name;
     int yearBorn;
-    int age;
+    float age;
 
     public Mangaka(String name, int yearBorn, int age)
     {
