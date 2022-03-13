@@ -7,28 +7,38 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
+//
+   mangaManager mangaManager;
 
     public static void main(String[] args) {
+
+//        mangaManager.displayAllItems();
+
         App app = new App();
         app.start();
     }
 
     private void start() {
+//        mangaManager = new mangaManager();
 
+        try {
+            displayMainMenu();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void displayMainMenu() throws IOException {
 
+
+
         final String MENU_ITEMS = "\n*** MENU OPTIONS ***\n"
                 + "1. Array\n"
-                + "2. Vehicles\n"
-                + "3. Bookings\n"
-                + "4. Exit\n"
-                + "Enter Option [1,4]";
+                + "2. Exit\n"
+                + "Enter Option [1,2]";
 
-        final int ARRAY = 1;
-        final int VEHICLES = 2;
-        final int BOOKINGS = 3;
+        final int MANGA = 1;
+
         final int EXIT = 4;
 
         Scanner keyboard = new Scanner(System.in);
@@ -39,15 +49,9 @@ public class App {
                 String usersInput = keyboard.nextLine();
                 option = Integer.parseInt(usersInput);
                 switch (option) {
-                    case PASSENGERS:
-                        System.out.println("Passengers option chosen");
+                    case MANGA:
+                        System.out.println("Works option chosen");
                         displayPassengerMenu();
-                        break;
-                    case VEHICLES:
-                        System.out.println("Vehicles option chosen");
-                        break;
-                    case BOOKINGS:
-                        System.out.println("Bookings option chosen");
                         break;
                     case EXIT:
                         System.out.println("Exit Menu option chosen");
@@ -75,8 +79,6 @@ public class App {
                 + "Enter Option [1,3]";
 
         final int SHOW_ALL = 1;
-        final int FIND_BY_NAME = 2;
-        final int ADD_PASSENGER = 3;
         final int EXIT = 4;
 
         Scanner keyboard = new Scanner(System.in);
@@ -88,35 +90,9 @@ public class App {
                 option = Integer.parseInt(usersInput);
                 switch (option) {
                     case SHOW_ALL:
-                        System.out.println("Display ALL Passengers");
-                        passengerStore.displayAllPassengers();
-                        break;
-                    case FIND_BY_NAME:
-                        System.out.println("Find Passenger by Name");
-                        System.out.println("Enter passenger name: ");
-                        String name = keyboard.nextLine();
-                        passengerStore.findpassengerbyName(name);
+                        System.out.println("Display ALL Items...");
+                        mangaManager.displayAllItems();
 
-                        break;
-                    case ADD_PASSENGER:
-                        Scanner kb = new Scanner(System.in);
-                        System.out.print("enter passenger name:");
-                        String input_name = kb.nextLine();
-
-
-                        System.out.print("enter passenger email:");
-                        String email = kb.next();
-
-                        System.out.print("enter passenger phonenumber:");
-                        String phonenumber = kb.next();
-
-                        System.out.print("enter passenger latitude:");
-                        double latitude = kb.nextDouble();
-
-                        System.out.print("enter passenger longtitude:");
-                        double longtitude = kb.nextDouble();
-                        passengerStore.add(input_name, email, phonenumber, latitude, longtitude);
-                        break;
                     case EXIT:
                         System.out.println("Exit Menu option chosen");
                         break;

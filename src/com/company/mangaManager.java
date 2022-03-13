@@ -1,10 +1,11 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class mangaManager
 {
-private final ArrayList<mangaManager> worksList;
+private ArrayList<mangaManager> worksList;
 
 
 public mangaManager()
@@ -30,5 +31,14 @@ public mangaManager()
     worksList.add(novel1);
     worksList.add(novel2);
     worksList.add(novel3);
+
+
 }
+
+    public void displayAllItems() {
+        for(mangaManager m : worksList)
+        {
+            System.out.println(m.toString());
+        }
+    }
 }
