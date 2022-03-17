@@ -15,6 +15,27 @@ public class Manga extends mangaManager {
 
     }
 
+    public int compareTo(Manga o)
+    {
+        int bSameFirst =
+                this.getYearAnimeStarted() - o.getYearAnimeStarted();
+
+        int  bSameLast =
+                this.getYearMangaStarted()- o.getYearMangaStarted();
+
+        if(bSameFirst == bSameLast) // Both first and last names are the same
+        {
+            //so, compare based on age
+            return this.getName().compareToIgnoreCase(o.getName());
+        }
+
+        else
+        {
+            return this.getName().compareToIgnoreCase(
+                    o.getName());
+        }
+    }
+
     public String getName() {
         return name;
     }
@@ -39,6 +60,7 @@ public class Manga extends mangaManager {
     public void setYearAnimeStarted(int yearAnimeStarted) {
         this.yearAnimeStarted = yearAnimeStarted;
     }
+
 
     @Override
     public String toString() {
