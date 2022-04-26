@@ -1,6 +1,6 @@
 package com.company;
 
-public class lightNovel extends mangaManager {
+public class lightNovel  {
     String name;
     int yearStarted;
     int yearFinished;

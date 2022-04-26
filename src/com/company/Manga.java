@@ -1,6 +1,6 @@
 package com.company;
 
-public class Manga extends mangaManager {
+public class Manga  {
     String name;
     int yearMangaStarted;
     int yearAnimeStarted;

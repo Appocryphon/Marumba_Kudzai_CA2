@@ -3,7 +3,6 @@ CREATE DATABASE `manga_database`;
 USE `manga_database`;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `MANGA_ID` int(11) NOT NULL AUTO_INCREMENT,
   `MANGA_NAME` varchar(50) NOT NULL,
   `YEAR_MANGA_STARTED` int(5) NOT NULL,
   `YEAR_ANIME_STARTED` int(5) NOT NULL,

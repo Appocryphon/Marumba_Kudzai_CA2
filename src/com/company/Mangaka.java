@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mangaka extends mangaManager {
+public class Mangaka {
 
     String name;
     float yearBorn;
